@@ -1,8 +1,15 @@
-const Item = ({ item }) => {
+// src/components/Item.jsx
+import React from "react";
 
-    // Render a single item
-    // Add a Delete and Edit button
-    return null;
+const Item = ({ item, onDelete }) => {
+  return (
+    <div style={{ marginBottom: "10px" }}>
+      <span>{item.name}</span>
+      <button onClick={() => onDelete(item.id)} style={{ marginLeft: "10px" }}>
+        Delete
+      </button>
+    </div>
+  );
 };
 
 export default Item;
